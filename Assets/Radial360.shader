@@ -43,7 +43,7 @@
 
 				float appearDirection = lerp(1, -1, step(_Clockwise, 0));
 				float fillAmount = lerp(1 - _FillAmount, _FillAmount, step(_Clockwise, 0));
-				float cutoff = angle < fillAmount ? 1 - _Clockwise : _Clockwise;
+				float cutoff = lerp(_Clockwise, 1 - _Clockwise, step(angle, fillAmount));
 				o.Alpha = _Color.a * cutoff;
 			}
 			ENDCG

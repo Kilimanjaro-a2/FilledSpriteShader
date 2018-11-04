@@ -53,8 +53,8 @@ public class FillAmountController : MonoBehaviour {
                 originX = -1;
                 break;
         }
-        MySpriteMaterial.SetFloat("_FillFromX", originX);
-        MySpriteMaterial.SetFloat("_FillFromY", originY);
+        MySpriteMaterial.SetFloat("_FillOriginX", originX);
+        MySpriteMaterial.SetFloat("_FillOriginY", originY);
         OriginLabel.text = "Origin: " + Enum.GetName(typeof(ButtonType), (ButtonType)type);
     }
 
@@ -62,7 +62,7 @@ public class FillAmountController : MonoBehaviour {
     {
         bool value = MyToggle.isOn;
         MyImage.fillClockwise = value;
-        MySpriteMaterial.SetFloat("_IsClockwise", value ? 1 : 0);
+        MySpriteMaterial.SetFloat("_Clockwise", value ? 1 : 0);
     }
 
     public void OnSliderChanged()

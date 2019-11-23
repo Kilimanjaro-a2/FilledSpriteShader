@@ -2,23 +2,23 @@
 
 ## Description
 
-これは、SpriteでImage.FillMethod.Radial360の動きを再現するためのシェーダーです。
+これは、SpriteでImage.FillMethod.Radial360の動きを再現するためのUnity向けシェーダーです。
 
 https://docs.unity3d.com/ja/2018.4/ScriptReference/UI.Image.FillMethod.Radial360.html
 
 
 ## Demo
-WebGL版のビルドです
+WebGLでビルドされたデモです。
 
 https://kilimanjaro-a2.github.io/FilledSprite/
 
 
 ## Usage
-以下のファイルをFilledSprite360.shaderとして保存します。
+以下のファイルを**FilledSprite360.shader**として保存します。
 
 https://gist.github.com/Kilimanjaro-a2/cc6317b43b3809b205a7273efb91372e
 
-その後、スプライトに任意のマテリアルをアタッチし、シェーダーをUnlit/FilledSprite360に変更します。
+その後、スプライトに任意のマテリアルをアタッチし、シェーダーを**Unlit/FilledSprite360**に変更します。
 
 
 ```C#
@@ -28,7 +28,7 @@ Material mat = mySpriteGameObject.GetComponent<SpriteRenderer>().material;
   _FillAmountに値を代入することで、
   スプライトの表示領域の大きさを変えることができます。
   値は0から1の範囲を代入でき、その値は0から360°にマッピングされます。
-  例えば0.75であれば0°から270°までの範囲でスプライトが表示されます。
+  例えば0.75であれば、スプライトの表示領域は0°から270°になります。
 */
 mat.SetFloat("_FillAmount", 0.75);
 
@@ -53,4 +53,4 @@ mat.SetFloat("_FillOriginY", 0);
 ```
 
 
-詳しい使い方はAssets/Plugin/FilledSprite/Samplesを参照してください。
+詳しい使い方は**Assets/Plugin/FilledSprite/Samples**を参照してください。

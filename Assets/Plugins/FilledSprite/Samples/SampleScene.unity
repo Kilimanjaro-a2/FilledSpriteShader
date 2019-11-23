@@ -1791,11 +1791,7 @@ MonoBehaviour:
   MySpriteObject: {fileID: 1488749393}
   MySlider: {fileID: 108918343}
   MyToggle: {fileID: 1718124165}
-  MyButtons:
-  - {fileID: 353008405}
-  - {fileID: 1536919694}
-  - {fileID: 416614448}
-  - {fileID: 39761543}
+  MyButtons: []
   OriginLabel: {fileID: 631954151}
 --- !u!4 &1514243690
 Transform:

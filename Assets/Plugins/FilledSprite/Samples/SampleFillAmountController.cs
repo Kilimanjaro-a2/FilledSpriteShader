@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public enum ButtonType
 {
     Bottom,
@@ -13,7 +12,7 @@ public enum ButtonType
     Left
 }
 
-public class FillAmountController : MonoBehaviour {
+public class SampleFillAmountController : MonoBehaviour {
     [SerializeField] private GameObject MyImageObject;
     [SerializeField] private GameObject MySpriteObject;
     private Image MyImage;
@@ -23,15 +22,9 @@ public class FillAmountController : MonoBehaviour {
     [SerializeField] private Button[] MyButtons;
     [SerializeField] private Text OriginLabel;
 
-    // Use this for initialization
     void Start () {
         MyImage = MyImageObject.GetComponent<Image>();
         MySpriteMaterial = MySpriteObject.GetComponent<SpriteRenderer>().material;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-
     }
 
     public void OnButtonChanged(int type){

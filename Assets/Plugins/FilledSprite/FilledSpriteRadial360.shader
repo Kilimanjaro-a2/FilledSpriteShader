@@ -1,4 +1,4 @@
-﻿Shader "Unlit/FillAmountRadial360v2"
+﻿Shader "Unlit/FilledSpriteRadial360"
 {
     Properties
     {

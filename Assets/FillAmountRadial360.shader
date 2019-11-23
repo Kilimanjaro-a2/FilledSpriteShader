@@ -9,11 +9,12 @@
 	}
 	SubShader{
 		Tags { "RenderType" = "Opaque" "Queue" = "Transparent" }
+		Lighting Off
 		LOD 200
 
 		CGPROGRAM
 
-		#pragma surface surf Standard fullforwardshadows alpha:fade
+		#pragma surface surf NoLighting alpha:fade
 
 		#pragma target 3.0
 
@@ -31,7 +32,7 @@
 		float _FillOriginY;
 		float _Clockwise;
 
-		void surf(Input IN, inout SurfaceOutputStandard o) {
+		void surf(Input IN, inout SurfaceOutput o) {
 			float2 pos = (IN.uv_MainTex - float2(0.5, 0.5)) * 2.0;
 			float subtrahend = atan2(pos.y, pos.x);
 			float minuend = atan2(_FillOriginY, _FillOriginX);
@@ -45,6 +46,11 @@
 			float fillAmount = lerp(1 - _FillAmount, _FillAmount, step(_Clockwise, 0));
 			float cutoff = lerp(_Clockwise, 1 - _Clockwise, step(angle, fillAmount));
 			o.Alpha = _Color.a * cutoff;
+		}
+
+ 		fixed4 LightingNoLighting(SurfaceOutput s, fixed3 lightDir, fixed atten)
+		{
+			return fixed4(s.Albedo, s.Alpha);
 		}
 		ENDCG
 	}

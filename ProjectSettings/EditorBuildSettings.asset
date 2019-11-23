@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Plugins/FilledSprite/Samples/SampleScene.unity
+    guid: 7cfa5794c34922c4b950e28f9826de09
   m_configObjects: {}

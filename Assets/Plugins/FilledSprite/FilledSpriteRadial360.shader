@@ -2,12 +2,12 @@
 {
     Properties
     {
-		_Color("Color", Color) = (1,1,1,1)
-		_MainTex("Albedo (RGB)", 2D) = "white" {}
-		_FillOriginY("FillOriginY", Float) = 0
-		_FillOriginX("FillOriginX", Float) = 0
-		[MaterialToggle] _Clockwise("Clockwise", Float) = 0
-		_FillAmount("FillAmount", Range(0, 1)) = 1.0
+        _Color("Color", Color) = (1,1,1,1)
+        _MainTex("Albedo (RGB)", 2D) = "white" {}
+        _FillOriginY("FillOriginY", Float) = 0
+        _FillOriginX("FillOriginX", Float) = 0
+        [MaterialToggle] _Clockwise("Clockwise", Float) = 0
+        _FillAmount("FillAmount", Range(0, 1)) = 1.0
     }
     SubShader
     {

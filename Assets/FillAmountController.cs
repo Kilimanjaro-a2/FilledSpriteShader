@@ -55,7 +55,7 @@ public class FillAmountController : MonoBehaviour {
         }
         MySpriteMaterial.SetFloat("_FillOriginX", originX);
         MySpriteMaterial.SetFloat("_FillOriginY", originY);
-        OriginLabel.text = "Origin: " + Enum.GetName(typeof(ButtonType), (ButtonType)type);
+        OriginLabel.text = "FillOrigin: " + Enum.GetName(typeof(ButtonType), (ButtonType)type);
     }
 
     public void OnClockwiseModeChanged()

@@ -1,5 +1,7 @@
 # FilledSpriteShader
 
+[日本語版README](https://github.com/Kilimanjaro-a2/FilledSpriteShader/blob/master/README.ja.md)
+
 ## Description
 
 This is a shader that allows Sprite to do the same as Image.FillMethod.Radial360 in Unity.
@@ -8,15 +10,15 @@ https://docs.unity3d.com/ja/2018.4/ScriptReference/UI.Image.FillMethod.Radial360
 
 
 ## Demo
-This is a demo built with WebGL
+This is a demo built with WebGL.
 
 https://kilimanjaro-a2.github.io/FilledSpriteShader/
 
 
 ## Usage
-Save the following file as **FilledSprite360.shader**.
+Save the following file as **FilledSprite360.shader** in your project.
 
-https://gist.github.com/Kilimanjaro-a2/cc6317b43b3809b205a7273efb91372e
+[FilledSpriteRadial360.shader](https://github.com/Kilimanjaro-a2/FilledSpriteShader/blob/master/Assets/Plugins/FilledSprite/FilledSpriteRadial360.shader)
 
 Then attach any material to the sprite and change the shader to **Unlit/FilledSprite360**.
 

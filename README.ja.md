@@ -1,5 +1,7 @@
 # FilledSpriteShader
 
+[English version of this file](https://github.com/Kilimanjaro-a2/FilledSpriteShader/blob/master/README.md)
+
 ## Description
 
 これは、SpriteでImage.FillMethod.Radial360の動きを再現するためのUnity向けシェーダーです。
@@ -16,7 +18,7 @@ https://kilimanjaro-a2.github.io/FilledSpriteShader/
 ## Usage
 以下のファイルを**FilledSprite360.shader**として保存します。
 
-https://gist.github.com/Kilimanjaro-a2/cc6317b43b3809b205a7273efb91372e
+[FilledSpriteRadial360.shader](https://github.com/Kilimanjaro-a2/FilledSpriteShader/blob/master/Assets/Plugins/FilledSprite/FilledSpriteRadial360.shader)
 
 その後、スプライトに任意のマテリアルをアタッチし、シェーダーを**Unlit/FilledSprite360**に変更します。
 

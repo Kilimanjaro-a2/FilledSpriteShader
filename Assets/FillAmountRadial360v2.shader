@@ -64,17 +64,10 @@
             fixed4 frag (v2f i) : SV_Target
             {
                 float2 pos = (i.uv - float2(0.5, 0.5)) * 2.0;
-                float subtrahend = atan2(pos.y, pos.x);
-                float minuend = atan2(_FillOriginY, _FillOriginX);
-                float angle = (subtrahend - minuend) / (PI * 2);
-                angle = lerp(angle + 1.0, angle, step(0, angle));
-
-                float appearDirection = lerp(1, -1, step(_Clockwise, 0));
-                float fillAmount = lerp(1 - _FillAmount, _FillAmount, step(_Clockwise, 0));
-                float cutoff = lerp(_Clockwise, 1 - _Clockwise, step(angle, fillAmount));
-                if(cutoff < 1) {
-                    discard;
-                }
+                float angle = (atan2(pos.y, pos.x) - atan2(_FillOriginY, _FillOriginX)) / (PI * 2);
+                float correctedAngle = lerp(angle + 1.0, angle, step(0, angle));
+                float fillAmount = lerp(1 - _FillAmount, _FillAmount, step(_Clockwise, 0));                
+                clip(lerp(_Clockwise, 1 - _Clockwise, step(correctedAngle, fillAmount)) - 1);
 
                 // apply fog
                 UNITY_APPLY_FOG(i.fogCoord, col);

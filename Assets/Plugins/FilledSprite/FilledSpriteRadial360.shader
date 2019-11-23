@@ -66,8 +66,9 @@
                 float2 pos = (i.uv - float2(0.5, 0.5)) * 2.0;
                 float angle = (atan2(pos.y, pos.x) - atan2(_FillOriginY, _FillOriginX)) / (PI * 2);
                 float correctedAngle = lerp(angle + 1.0, angle, step(0, angle));
-                float fillAmount = lerp(1 - _FillAmount, _FillAmount, step(_Clockwise, 0));                
-                clip(lerp(_Clockwise, 1 - _Clockwise, step(correctedAngle, fillAmount)) - 1);
+                int clockwiseBit = step(1, _Clockwise);
+                float fillAmount = lerp(1 - _FillAmount, _FillAmount, step(clockwiseBit, 0));                
+                clip(lerp(clockwiseBit, 1 - clockwiseBit, step(correctedAngle, fillAmount)) - 1);
 
                 // apply fog
                 UNITY_APPLY_FOG(i.fogCoord, col);

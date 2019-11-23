@@ -10,7 +10,7 @@ https://docs.unity3d.com/ja/2018.4/ScriptReference/UI.Image.FillMethod.Radial360
 ## Demo
 WebGLでビルドされたデモです。
 
-https://kilimanjaro-a2.github.io/FilledSprite/
+https://kilimanjaro-a2.github.io/FilledSpriteShader/
 
 
 ## Usage

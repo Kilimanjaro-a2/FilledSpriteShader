@@ -63,7 +63,7 @@
 
             fixed4 frag (v2f i) : SV_Target
             {
-                if (_Clockwise == 1)
+                if (_FillAmount == 1)
                 {
                     return tex2D(_MainTex, i.uv) * _Color;
                 }

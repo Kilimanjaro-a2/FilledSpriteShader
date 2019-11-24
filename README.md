@@ -6,6 +6,8 @@
 
 This is a shader that allows Sprite to do the same as Image.FillMethod.Radial360 in Unity.
 
+![AnimationGif](https://user-images.githubusercontent.com/30808673/69492684-fe4ecc80-0ee8-11ea-8b7a-68ce8664b3c9.gif)
+
 https://docs.unity3d.com/ja/2018.4/ScriptReference/UI.Image.FillMethod.Radial360.html
 
 

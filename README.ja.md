@@ -6,6 +6,8 @@
 
 これは、SpriteでImage.FillMethod.Radial360の動きを再現するためのUnity向けシェーダーです。
 
+![AnimationGif](https://user-images.githubusercontent.com/30808673/69492684-fe4ecc80-0ee8-11ea-8b7a-68ce8664b3c9.gif)
+
 https://docs.unity3d.com/ja/2018.4/ScriptReference/UI.Image.FillMethod.Radial360.html
 
 

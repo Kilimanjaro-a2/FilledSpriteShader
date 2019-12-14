@@ -1,6 +1,5 @@
 ﻿// Retrieved from:
-// https://github.com/Kilimanjaro-a2/SpritePositionAdjuster/blob/a0cc0a1f2a111faa2f0259394122fa4d80b24511/Assets/Plugins/SpritePositionAdjuster/SpritePositionAdjuster.cs
-
+// https://github.com/Kilimanjaro-a2/SpritePositionAdjuster/blob/master/Assets/Plugins/SpritePositionAdjuster/SpritePositionAdjuster.cs
 using UnityEngine;
 
 namespace KiliWare
@@ -14,13 +13,20 @@ namespace KiliWare
         protected int previousScreenWidth;
         protected int previousScreenHeight;
 
+        #if UNITY_EDITOR
+            public bool showsDebugLog = true;
+        #endif
+
         protected void Awake()
         {
             startScale = transform.localScale;
             startPosition = transform.position - Camera.main.transform.position;
 
             #if UNITY_EDITOR
-                Debug.Log("Current screen height is: " + Screen.height + ". If you want to preserve current scale and position of this sprites, set OriginalScreenHeight property " + Screen.height + " and restart the scene to check whether it works correctly.");
+                if (showsDebugLog)
+                {
+                    Debug.Log("Current screen height is: " + Screen.height + ". If you want to preserve current scale and position of this sprites, set OriginalScreenHeight property " + Screen.height + " and restart the scene to check whether it works correctly.");
+                }
             #endif
 
             previousScreenWidth = Screen.width;
@@ -35,9 +41,8 @@ namespace KiliWare
 
             transform.localScale = new Vector2(startScale.x, startScale.y) * ajustedHeight;
 
-            Vector2 adjustedPosition = startPosition * ajustedHeight;
-            adjustedPosition.y += Camera.main.transform.position.y;
-            transform.position = adjustedPosition;
+            Vector2 cameraPos = Camera.main.transform.position;
+            transform.position = startPosition * ajustedHeight + cameraPos;
         }
 
         // When you checkes "KeepsPositionUpdated",
@@ -58,3 +63,4 @@ namespace KiliWare
         }
     }
 }
+

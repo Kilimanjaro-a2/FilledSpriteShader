@@ -20,7 +20,7 @@ https://kilimanjaro-a2.github.io/FilledSpriteShader/
 ## Usage
 Save the following file as **FilledSprite360.shader** in your project.
 
-[FilledSpriteRadial360.shader](https://github.com/Kilimanjaro-a2/FilledSpriteShader/blob/master/Assets/Plugins/FilledSprite/FilledSpriteRadial360.shader)
+[FilledSpriteRadial360.shader](https://github.com/Kilimanjaro-a2/FilledSpriteShader/blob/master/Assets/FilledSpriteRadial360.shader)
 
 Then attach any material to the sprite and change the shader to **Unlit/FilledSprite360**.
 

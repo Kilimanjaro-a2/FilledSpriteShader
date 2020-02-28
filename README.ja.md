@@ -20,7 +20,7 @@ https://kilimanjaro-a2.github.io/FilledSpriteShader/
 ## Usage
 以下のファイルを**FilledSprite360.shader**として保存します。
 
-[FilledSpriteRadial360.shader](https://github.com/Kilimanjaro-a2/FilledSpriteShader/blob/master/Assets/Plugins/FilledSprite/FilledSpriteRadial360.shader)
+[FilledSpriteRadial360.shader](https://github.com/Kilimanjaro-a2/FilledSpriteShader/blob/master/Assets/FilledSpriteRadial360.shader)
 
 その後、スプライトに任意のマテリアルをアタッチし、シェーダーを**Unlit/FilledSprite360**に変更します。
 
